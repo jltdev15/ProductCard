@@ -1,0 +1,41 @@
+
+.hide {
+    transform: scale(0);
+
+}
+.bg-modal {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    
+}
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px; /* Adjust the size as needed */
+    height: 16px; /* Adjust the size as needed */
+    border: 2px solid #333; /* Border color */
+    border-radius: 50%; /* Make it circular */
+    outline: none;
+    cursor: pointer;
+}
+.active {
+    background-color: red;
+    color: white;
+}
+.hide-error {
+    display: none;
+}
+.selected {
+    border: 2px solid red;
+}
+/* .animation {
+    transform: scale(1);
+ 
+} */

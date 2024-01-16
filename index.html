@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Card Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="tailwind.config.js"></script>
+  </head>
+  <body id="body" class="flex items-center justify-center h-screen">
+    <!-- Success Modal -->
+    <section class="transition-all duration-[0.3s] hide bg-modal">
+      <div class="bg-gray-200">
+        <header
+          class="w-full p-6 text-3xl font-bold text-center bg-green-500 text-gray-50"
+        >
+          <p>Success</p>
+        </header>
+        <div class="p-3">
+          <p class="py-6 text-2xl font-semibold text-center">
+            Your Order is placed!
+          </p>
+          <ul class="flex flex-col justify-center gap-3 p-6">
+            <p class="text-3xl font-bold" id="prod-title">Product Title</p>
+            <p class="text-xl font-bold" id="order-type">Order Type</p>
+            <p class="text-xl font-semibold" id="prod-qty">Quantity</p>
+            <p class="text-xl font-semibold" id="total-price">Price</p>
+          </ul>
+          <div class="flex justify-end py-6">
+            <button
+              id="confirmButton"
+              class="w-full px-6 py-3 bg-green-500 text-gray-50"
+            >
+              Proceed
+            </button>
+          </div>
+        </div>
+        <p
+      </div>
+    </section>
+    <section class="w-3/12">
+      <div class="relative p-12 overflow-hidden bg-yellow-200 rounded-t-xl">
+        <img class="w-[95%] mx-auto" src="images/burger.png" alt="Hamburger" />
+        <p
+          class="absolute left-[63%] py-3 text-xl font-semibold top-4 shadow-xl bg-red-600 text-gray-100 w-3/6 text-center right-0 rotate-[35deg]"
+        >
+          Best Seller
+        </p>
+      </div>
+      <div class="px-6 pt-6 pb-12 bg-gray-100 shadow-lg">
+        <div class="flex items-center justify-between">
+          <h1 class="text-3xl font-bold">Cheesy Bacon Hamburger</h1>
+        </div>
+
+        <div class="flex gap-2">
+          <img class="w-auto h-4" src="images/active-star.png" alt="" />
+          <img class="w-auto h-4" src="images/active-star.png" alt="" />
+          <img class="w-auto h-4" src="images/active-star.png" alt="" />
+          <img class="w-auto h-4" src="images/active-star.png" alt="" />
+          <img class="w-auto h-4" src="images/inactive-star.png" alt="" />
+        </div>
+        <p class="text-3xl font-bold">
+          <span class="pr-1 text-base">$</span>2.49
+        </p>
+        <p class="py-3 text-base">
+          Each bite is a burst of flavor, delivering an unparalleled taste
+          experience. Indulge in the ultimate satisfaction with our delicious
+          burger, crafted for those who crave perfection in every bite.
+        </p>
+        <div class="flex items-center justify-between pt-6">
+          <div class="flex items-center gap-2">
+            <p
+              id="solo"
+              class="px-6 py-3 hover:cursor-pointer bg-gray-50"
+            >
+              Solo
+            </p>
+            <p id="value-meal" class="px-4 py-3 bg-yellow-300 hover:cursor-auto">
+              Value Meal
+            </p>
+          </div>
+          <div class="flex gap-2">
+            <button
+              class="py-2 text-xl w-[2.6rem] btn-minus bg-gray-200 rounded-[50%] font-bold"
+            >
+              -
+            </button>
+            <button
+              class="py-2 text-xl w-[2.6rem] btn-add bg-gray-200 rounded-[50%] font-bold"
+            >
+              +
+            </button>
+            <input
+              class="w-[4rem] px-2 text-center quantity"
+              type="number"
+              value="0"
+            />
+          </div>
+        </div>
+        <div id="error-message" class="relative text-right hide-error"><p class="absolute right-0 text-red-600 top-3">Quantity cant be 0 (zero)</p></div>
+
+        <div class="flex justify-end gap-3 pt-12">
+          <button class="w-2/6 px-6 py-3 bg-white">Cancel</button>
+          <button
+            class="w-9/12 px-6 py-3 font-bold text-gray-100 bg-red-600 btn-cta"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
