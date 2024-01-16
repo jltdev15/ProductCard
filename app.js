@@ -36,23 +36,7 @@ valueMeal.addEventListener("click", () => {
   console.log(orderType);
 });
 
-btnOrderNow.addEventListener("click", () => {
-  if (qty.value === "0") {
-    return error.classList.remove("hide-error");
-  }
-  error.classList.add("hide-error");
-  backdrop.classList.remove("hide");
-  orderMenu.textContent = orderClass;
-  prodTitle.textContent = productTitle;
-  prodQty.textContent = `Quantity : ${qty.value}`;
-  const finalCost = computeTotalCost(qty.value);
-  totalPrice.textContent = `Total cost : $ ${finalCost}`;
-  console.log(finalCost);
-});
 
-btnConfirm.addEventListener("click", () => {
-  backdrop.classList.add("hide");
-});
 
 const computeTotalCost = (qty) => {
   if (orderType) {
@@ -73,5 +57,23 @@ const reduceQty = () => {
     qty.value = value;
   }
 };
+
+btnOrderNow.addEventListener("click", () => {
+    if (qty.value === "0") {
+      return error.classList.remove("hide-error");
+    }
+    error.classList.add("hide-error");
+    backdrop.classList.remove("hide");
+    orderMenu.textContent = orderClass;
+    prodTitle.textContent = productTitle;
+    prodQty.textContent = `Quantity : ${qty.value}`;
+    const finalCost = computeTotalCost(qty.value);
+    totalPrice.textContent = `Total cost : $ ${finalCost}`;
+    console.log(finalCost);
+  });
+  
+  btnConfirm.addEventListener("click", () => {
+    backdrop.classList.add("hide");
+  });
 btnAdd.addEventListener("click", addQty);
 btnMinus.addEventListener("click", reduceQty);
